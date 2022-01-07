@@ -5,7 +5,7 @@ library(readxl)
 library(patchwork)
 
 #Data Cleaning
-df <- read_excel("Week1/YUEData11-21.xlsx")
+df <- read_excel("data/YUEData11-21.xlsx")
 
 df <- df %>% janitor::clean_names() %>% 
   subset(select = c(series_id,jan_2016:dec_2021)) %>% 
