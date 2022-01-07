@@ -3,6 +3,7 @@ library(janitor)
 library(zoo)
 library(readxl)
 library(patchwork)
+library(artyfarty)
 
 #Data Cleaning
 df <- read_excel("data/YUEData11-21.xlsx")
@@ -29,6 +30,7 @@ comp <- c("Youth (16-24)","Adults (25+)")
 racedf <- df %>% filter(series_id %in% race)
 compdf <- df %>% filter(series_id %in% comp)
 
+youth <- df$value[]
 #Build plots
 raceplot <- ggplot(racedf, aes(x = month, y = value, color = series_id)) +
   geom_line(size = 0.8) +
