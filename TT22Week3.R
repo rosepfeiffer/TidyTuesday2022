@@ -82,8 +82,9 @@ plot <- (omap + fmap) + plot_annotation(title = "Do Cocoa Producing Countries Ma
               family = "Gloria Hallelujah",color = "#59372a"),
               rect = element_rect(fill="#ffebd6"))) +
   plot_layout(guides="collect") & theme(legend.position = "bottom")
-                               
-plot
+
+#Add theme() to remove white lines from plot.                             
+plot <- plot & theme(plot.background = element_rect(color=NA))
 
 ggsave("TT22week3.png", plot = plot, height = 5, width = 7, units = "in")
 
